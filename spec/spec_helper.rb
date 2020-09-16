@@ -1,4 +1,4 @@
-require "aip_validator"
+require "airswap_aip_validator"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

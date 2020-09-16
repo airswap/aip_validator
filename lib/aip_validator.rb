@@ -1,6 +1,6 @@
-require "aip_validator/version"
-require 'aip_validator/loader'
-require 'aip_validator/validator'
+require 'airswap_aip_validator/version'
+require 'airswap_aip_validator/loader'
+require 'airswap_aip_validator/validator'
 
 module AipValidator
   class Runner

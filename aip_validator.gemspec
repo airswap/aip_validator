@@ -1,16 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "aip_validator/version"
+require "airswap_aip_validator/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "aip_validator"
+  spec.name          = "airswap_aip_validator"
   spec.version       = AipValidator::VERSION
   spec.authors       = ["dmosites"]
   spec.email         = ["@dmosites"]
 
   spec.summary       = "Small library to check if AIP doc has valid front matter"
-  spec.homepage      = "https://github.com/airswap/aip_validator"
+  spec.homepage      = "https://github.com/airswap/airswap_aip_validator"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

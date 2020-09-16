@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'aip_validator'
+require 'airswap_aip_validator'
 
 AipValidator::Runner.run ARGV

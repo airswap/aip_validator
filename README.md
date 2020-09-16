@@ -1,6 +1,6 @@
 # AIP validator
 
-[![Gem](https://img.shields.io/gem/v/aip_validator.svg?style=flat)](http://rubygems.org/gems/aip_validator "View this project in Rubygems")
+[![Gem](https://img.shields.io/gem/v/airswap_aip_validator.svg?style=flat)](http://rubygems.org/gems/airswap_aip_validator "View this project in Rubygems")
 
 Small library to check if AIP doc has valid front matter. Original work at https://github.com/ethereum/eip_validator
 
@@ -41,19 +41,19 @@ Small library to check if AIP doc has valid front matter. Original work at https
 ## Setup
 
 ```
-gem install aip_validator
+gem install airswap_aip_validator
 ```
 
 ## Usage (command line)
 
 ```ruby
-aip_validator INPUT_FILES
+airswap_aip_validator INPUT_FILES
 ```
 
 ## Usage (as a lib)
 
 ```ruby
-require 'aip_validator'
+require 'airswap_aip_validator'
 
 AipValidator::Runner.run
 ```
@@ -61,7 +61,7 @@ AipValidator::Runner.run
 ### Example
 
 ```
-$aip_validator  ~/src/AIPs/AIPS/*[0-9].md
+$airswap_aip_validator  ~/src/AIPs/AIPS/*[0-9].md
 
 total:1, valid:1, invalid:0, errors:0
 	statuses: [["Implemented", 1]]
