@@ -1,12 +1,14 @@
-# YIP validator
-[![Gem](https://img.shields.io/gem/v/yip_validator.svg?style=flat)](http://rubygems.org/gems/yip_validator "View this project in Rubygems")
+# AIP validator
 
+[![Gem](https://img.shields.io/gem/v/aip_validator.svg?style=flat)](http://rubygems.org/gems/aip_validator "View this project in Rubygems")
+
+Small library to check if AIP doc has valid front matter. Original work at https://github.com/ethereum/eip_validator
 
 ## Validation rules
 
 ### Mandatory fields
 
-- yip
+- aip
 - title
 - author
 - status
@@ -15,25 +17,22 @@
 ### Optional fields
 
 - discussions-to
-- layer
 - replaces
 - requires
-- resolution
 - review-period-end
 - superseded-by
 - updated
 
 ### Mandatory values
 
-- `status` must be:
-	* 'WIP'
-	* 'Proposed'
-	* 'Approved'
-	* 'Implemented'
-	* 'Withdrawn'
-	* 'Deferred'
-	* 'Rejected'
-	* 'Moribund'
+- `status` must be one of:
+  - `Draft`
+  - `Proposed`
+  - `Approved`
+  - `Implemented`
+  - `Withdrawn`
+  - `Deferred`
+  - `Rejected`
 
 ## Prerequisite
 
@@ -42,27 +41,27 @@
 ## Setup
 
 ```
-gem install yip_validator
+gem install aip_validator
 ```
 
 ## Usage (command line)
 
 ```ruby
-yip_validator INPUT_FILES
+aip_validator INPUT_FILES
 ```
 
 ## Usage (as a lib)
 
 ```ruby
-require 'yip_validator
+require 'aip_validator'
 
-YipValidator::Runner.run 
+AipValidator::Runner.run
 ```
 
 ### Example
 
 ```
-$yip_validator  ~/src/YIPs/YIPS/*[0-9].md
+$aip_validator  ~/src/AIPs/AIPS/*[0-9].md
 
 total:1, valid:1, invalid:0, errors:0
 	statuses: [["Implemented", 1]]

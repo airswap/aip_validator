@@ -1,8 +1,8 @@
-require "yip_validator/version"
-require 'yip_validator/loader'
-require 'yip_validator/validator'
+require "aip_validator/version"
+require 'aip_validator/loader'
+require 'aip_validator/validator'
 
-module YipValidator
+module AipValidator
   class Runner
     class << self
       def run(file_names)
@@ -17,8 +17,8 @@ module YipValidator
         layers = []
         file_names.map do |file_name|
           # Disable file check
-          # unless file_name.match(/.*yip-\d+.md$/)
-          #   puts "Warning: #{file_name} does not match yip file format"
+          # unless file_name.match(/.*aip-\d+.md$/)
+          #   puts "Warning: #{file_name} does not match aip file format"
           #   next
           # end
           attributes = Loader.load(file_name)

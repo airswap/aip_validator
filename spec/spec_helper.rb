@@ -1,4 +1,4 @@
-require "yip_validator"
+require "aip_validator"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

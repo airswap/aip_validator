@@ -1,25 +1,25 @@
 require 'spec_helper'
 
-RSpec.describe "YipValidator::Loader"  do
+RSpec.describe "AipValidator::Loader"  do
   let(:status) { 'Implemented' }
-  let(:yip){
+  let(:aip){
     {
-      "yip" => 7,
-      "title" => 'Oracle Trading Locks',
-      "author" => 'Jackson Chan, Kain Warwick, Clinton Ennis',
+      "aip" => 1,
+      "title" => 'An Improvement',
+      "author" => 'Alice, Bob, Carol',
       "status" => status,
-      "created" => Date.parse('2019-07-09')
+      "created" => Date.parse('2017-10-10')
     }
   }
   let(:file_name) {
-   'spec/fixtures/valid/yip-7.md'
+   'spec/fixtures/valid/aip-1.md'
   }
 
-  subject(:loader){ YipValidator::Loader.load(file_name)}
+  subject(:loader){ AipValidator::Loader.load(file_name)}
 
   describe "valid" do
     it "should have required fields" do
-      expect(loader).to eq(yip)
+      expect(loader).to eq(aip)
     end
   end
 end

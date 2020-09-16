@@ -1,6 +1,6 @@
 require 'active_model'
 
-module YipValidator
+module AipValidator
   class Validator
     def initialize(opts = {})
       # ruby does not allow method with -
@@ -16,12 +16,12 @@ module YipValidator
     end
 
     include ActiveModel::Model
-    attr_accessor :yip, :title, :author, :status, :created, :updated
+    attr_accessor :aip, :title, :author, :status, :created, :updated
     attr_accessor :replaces, :requires, :layer, :resolution, :implementation
     # replace - with _
     attr_accessor :discussions_to, :superseded_by, :review_period_end
     validates_presence_of :title, :author, :status, :created
-    validates :yip, presence: true
+    validates :aip, presence: true
     validates_inclusion_of :status, in: ['WIP', 'Proposed', 'Approved', 'Implemented', 'Rejected', 'Withdrawn', 'Deferred', 'Moribund']
   end
 end

@@ -1,7 +1,7 @@
 require 'yaml'
 require 'front_matter_parser'
 
-module YipValidator
+module AipValidator
   class Loader
     UNSAFE_LOADER = ->(string) { YAML.load(string) }
 
