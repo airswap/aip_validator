@@ -10,13 +10,13 @@ Small library to check if AIP doc has valid front matter. Original work at https
 
 - aip
 - title
-- author
 - status
+- author
 - created
+- discussions-to
 
 ### Optional fields
 
-- discussions-to
 - replaces
 - requires
 - review-period-end
@@ -26,13 +26,14 @@ Small library to check if AIP doc has valid front matter. Original work at https
 ### Mandatory values
 
 - `status` must be one of:
-  - `Draft`
+  - `WIP`
   - `Proposed`
   - `Approved`
   - `Implemented`
   - `Withdrawn`
   - `Deferred`
   - `Rejected`
+  - `Moribund`
 
 ## Prerequisite
 

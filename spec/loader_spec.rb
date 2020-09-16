@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'json'
 
 RSpec.describe "AipValidator::Loader"  do
   let(:status) { 'Implemented' }
@@ -8,7 +9,8 @@ RSpec.describe "AipValidator::Loader"  do
       "title" => 'An Improvement',
       "author" => 'Alice, Bob, Carol',
       "status" => status,
-      "created" => Date.parse('2017-10-10')
+      "created" => Date.parse('2017-10-10'),
+      "discussions-to": "https://chat.airswap.io/"
     }
   }
   let(:file_name) {
@@ -19,7 +21,7 @@ RSpec.describe "AipValidator::Loader"  do
 
   describe "valid" do
     it "should have required fields" do
-      expect(loader).to eq(aip)
+      expect(JSON.dump loader).to eq(JSON.dump aip)
     end
   end
 end

@@ -2,14 +2,14 @@ require 'spec_helper'
 
 RSpec.describe "AipValidator::Validator"  do
   let(:status) { 'Implemented' }
-
   let(:aip){
     {
-      aip: 7,
-      title: 'Oracle Trading Locks',
-      author: 'Jackson Chan, Kain Warwick, Clinton Ennis',
-      status: status,
-      created: '2019-07-09'
+      "aip" => 1,
+      "title" => 'An Improvement',
+      "author" => 'Alice, Bob, Carol',
+      "status" => status,
+      "created" => Date.parse('2017-10-10'),
+      "discussions-to": "https://chat.airswap.io/"
     }
   }
   subject(:validator){ AipValidator::Validator.new(aip)}
